@@ -1,6 +1,7 @@
 public abstract class Beast extends Creature{
     protected int speed;
     protected final int maxSatiety;
+
     protected int actualSatiety;
 
     public Beast(final int maxSize, int speed, final int maxSatiety){
@@ -31,6 +32,13 @@ public abstract class Beast extends Creature{
 
     public int getSpeed() {
         return speed;
+    }
+
+    protected int missingSatiety(){
+        return maxSatiety - actualSatiety;
+    }
+    public int getActualSatiety() {
+        return actualSatiety;
     }
 
 }
